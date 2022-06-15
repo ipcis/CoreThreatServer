@@ -2,9 +2,6 @@ import socket
 import sys
 
 
-
-
-
 def banner():
     print("")
     print(" Core|Threat Server")
