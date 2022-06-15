@@ -2,6 +2,9 @@ import socket
 import sys
 
 
+
+
+
 def banner():
     print("")
     print(" Core|Threat Server")
@@ -21,23 +24,11 @@ print("  [+] listening on port: " + str(port))
 print("  [+] server is up and running")
 
 
-# because animation is cool
-switch = 0
-
 def checkMessage(message):
+    if "vssadmin" in message.lower():
+        print("FOUND")
     
-    global switch
-    
-    if switch == 0:
-        print('  [-] receiving data ...', end='\r', flush=True)
-        switch = 1
-        return
 
-    if switch == 1:
-        print('  [|] receiving data ...', end='\r', flush=True)
-        switch = 0
-        return
-    #print("  [+] receiving data...")
 
 try:
     while True:
