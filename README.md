@@ -5,9 +5,9 @@
 Core|Threat Agent collects security logs.
 
 ## Usage
-run <ip:port> - Run Server default
-debug - Run Server in debug mode
-debug <regex> - Run Server in debug mode with filter - example: debug .*lsass.* or .*event.id.3.* or .*event.id.1.*
+<code>run <ip:port> - Run Server default</code>
+<code>debug - Run Server in debug mode</code>
+<code>debug <regex> - Run Server in debug mode with filter - example: debug .*lsass.* or .*event.id.3.* or .*event.id.1.*</code>
 
 ## Features
 + Runs listener and collect logs
