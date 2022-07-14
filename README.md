@@ -2,7 +2,7 @@
 <img src="https://corethreat.net/ct_logo_big.png" height="300px"> 
 
 ## What is Core|Threat Server?
-Core|Threat Agent collects security logs.
+Core|Threat Syslog Server. Collect, parse and analyze security logs.
 
 ## Usage
 <code>run <ip:port> - Run Server default</code>
