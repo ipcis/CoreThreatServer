@@ -1,0 +1,8 @@
+RULEID : "00000004"
+Name : "ShadowCopies delete detected"
+Description : "ShadowCopies delete detected - CAT Ransomware"
+MITREID : "XXX" 
+EventID : "1"
+String_1 : "vssadmin",CommandLine
+String_2 : "delete",CommandLine
+String_3 : "",all

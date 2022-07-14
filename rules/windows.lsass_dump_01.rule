@@ -1,0 +1,8 @@
+RULEID : "00000001"
+Name : "LSASS Dump"
+Description : "LSASS Dump over Taskmgr - CAT Credential_dump"
+MITREID : "T1087.001" 
+EventID : "11"
+String_1 : "lsass",TargetFilename
+String_2 : "taskmgr",Image
+String_3 : "",all

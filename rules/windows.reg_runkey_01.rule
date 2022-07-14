@@ -1,0 +1,8 @@
+RULEID : "00000002"
+Name : "Registry run key access or edit"
+Description : "Registry run key access or edit - CAT Persistens"
+MITREID : "Txxx" 
+EventID : "12"
+String_1 : "currentversion",TargetObject
+String_2 : "run",TargetObject
+String_3 : "",all

@@ -1,0 +1,8 @@
+RULEID : "00000007"
+Name : "Process starting from abnormal parent (word)"
+Description : "Process starting from abnormal parent (word) - CAT SuspiciousBehaivior"
+MITREID : "Txxx" 
+EventID : "1"
+String_1 : "powershell.exe",Image
+String_2 : "word.exe",ParentImage
+String_3 : "",all

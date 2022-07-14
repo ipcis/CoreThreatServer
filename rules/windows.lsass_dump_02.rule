@@ -1,0 +1,8 @@
+RULEID : "00000002"
+Name : "LSASS Dump"
+Description : "LSASS Dump (mimikatz) - CAT Credential_dump"
+MITREID : "T1087.001" 
+EventID : "10"
+String_1 : "lsass",TargetImage
+String_2 : "GrantedAccess",all
+String_3 : "",all

@@ -1,0 +1,8 @@
+RULEID : "0000000003"
+Name : "Bitsadmin process detected"
+Description : "Bitsadmin process detected - CAT Data Exfiltration"
+MITREID : "T" 
+EventID : "1"
+String_1 : "bitsadmin",Image
+String_2 : "transfer",all
+String_3 : "http",all

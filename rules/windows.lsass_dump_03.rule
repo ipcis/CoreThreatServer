@@ -1,0 +1,8 @@
+RULEID : "0000000003"
+Name : "LSASS dump detected"
+Description : "LSASS dump over comsvcs detected - CAT Credential_dump"
+MITREID : "T1087.001" 
+EventID : "1"
+String_1 : "rundll32.exe",Image
+String_2 : "comsvcs.dll",all
+String_3 : "MiniDump",all

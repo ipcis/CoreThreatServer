@@ -1,0 +1,8 @@
+RULEID : "00000005"
+Name : "Executeable running from temp detected"
+Description : "Executeable running from temp detected - CAT SuspiciousBehaivior"
+MITREID : "Txxx" 
+EventID : "1"
+String_1 : ".exe",Image
+String_2 : "temp",Image
+String_3 : "",all

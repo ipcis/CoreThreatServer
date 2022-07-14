@@ -1,0 +1,8 @@
+RULEID : "0000000003"
+Name : "SCHTASKS process detected"
+Description : "SCHTASKS process detected - CAT Persistence"
+MITREID : "T" 
+EventID : "1"
+String_1 : "schtasks",Image
+String_2 : "create",all
+String_3 : "sc",all
