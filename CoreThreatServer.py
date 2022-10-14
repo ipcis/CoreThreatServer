@@ -104,7 +104,7 @@ def runListener():
     UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
     # Bind to address and ip
-    UDPServerSocket.bind((localIP, localPort))
+    UDPServerSocket.bind((localIP, int(localPort)))
     printMessage("CoreThreat Server up and listening on: " + localIP + " : " + str(localPort))
     writeLog("CoreThreat Server up and listening on: " + localIP + " : " + str(localPort), "info")
 
@@ -539,7 +539,9 @@ def main():
     #global vars
     global debug_mode
     global universal_message_filter
-
+    global localIP
+    global localPort
+    
     #Default action install
     if len(actions_list) == 0:
         help()
