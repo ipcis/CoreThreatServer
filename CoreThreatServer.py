@@ -61,6 +61,7 @@ localIP     = "192.168.1.35"
 localPort   = 5514
 bufferSize  = 65500
 universal_message_filter = ""
+writeHumanLog = True
 
 # init logging
 logging.basicConfig( level=logging.DEBUG, filemode='w', filename='corethreat_server.log', format='%(name)s - %(levelname)s - %(message)s')
@@ -85,6 +86,9 @@ def printMessage(message):
     #color - fix me
 
     filter = universal_message_filter
+
+    if writeHumanLog:
+        writeLog(getDateTime() + " HUMANLOG " + str(message), "info")
 
     if filter == "":
         print("")
@@ -509,6 +513,11 @@ def mainLoader():
                         print(colored(" [!] Threat detected", 'red') + " " + threat_found_message)
                         print("")
                         writeLog("[!] Threat detected : " + threat_found_message, "critical")
+
+                        if writeHumanLog:
+                            threat_message = "[!] Threat detected : " + threat_found_message
+                            writeLog(getDateTime() + " HUMANLOG " + str(threat_message), "critical")
+
             else:
                 print(" [+] Non Sysmon message")
                 print(colored(str(clientMsg), 'cyan'))
