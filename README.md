@@ -23,7 +23,7 @@ Sysmon only captures established network connections. To monitor other connectio
 ## VirtualBox Automation
  Restore snapshot
  
-<code>C:\Program Files\Oracle\VirtualBox>VBoxManage.exe snapshot "WIN10CLIENT-MalwareAnalyse" restore "Analyse01"</code>
+<code>VBoxManage.exe snapshot "WIN10CLIENT-MalwareAnalyse" restore "Analyse01"</code>
 
  Power-Off VM
  
