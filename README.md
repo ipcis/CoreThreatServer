@@ -32,4 +32,10 @@ Sysmon only captures established network connections. To monitor other connectio
  Power-On VM
  
 <code>vboxmanage.exe startvm WIN10CLIENT-MalwareAnalyse</code>
+  
+  ## Tricks
+  
+  Tail over the log
+  
+  <code>tail -f corethreat_server.log | grep HUMANLOG</code>
 
