@@ -14,3 +14,8 @@ Core|Threat Syslog Server. Collect, parse and analyze security logs. Use the Cor
 ## Features
 + Runs listener and collect logs
 + Use rules to identify threats
+
+## Sysmon and Network
+Sysmon only captures established network connections. To monitor other connections too, start tcpdump
+
+<code>tcpdump -i any -nnnn "tcp[tcpflags] & (tcp-syn) == tcp-syn" and host 10.10.10.101</code>
