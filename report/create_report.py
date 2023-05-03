@@ -5,9 +5,9 @@ import datetime as DT
 
 now = time.strftime("%Y%m%d-%H%M%S")
 current_dir = os.getcwd()
-template_file = current_dir + "/src/edr_dashboard.html"
-report_file = current_dir + "/src/edr_dashboard_out.html"
-logfile = "corethreat.log"
+template_file = current_dir + "/ct_sandbox.html"
+report_file = current_dir + "/report_"+str(now)+".html"
+logfile = "../corethreat_server.log"
 
 
 
@@ -42,14 +42,13 @@ log_entry_list = []
 
 with open(logfile, "rt") as log:
         for line in log:
-            host_entry = host_entry + "<td>"
-            host_entry = host_entry + "</td>"
 
-
-            log_entry = tr_start + line + tr_end
-            #print(host_entry)
-            log_entry_list.append(log_entry)
-            log_entry = ""
+            if "HUMANLOG" in line:
+                log_line = '<td>' + line + '</td>'
+                log_entry = tr_start + log_line + tr_end
+                #print(host_entry)
+                log_entry_list.append(log_entry)
+                log_entry = ""
 
 
 
