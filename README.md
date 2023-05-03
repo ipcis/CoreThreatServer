@@ -21,7 +21,6 @@ Sysmon only captures established network connections. To monitor other connectio
 <code>tcpdump -i any -nnnn "tcp[tcpflags] & (tcp-syn) == tcp-syn" and host 10.10.10.101</code>
 
 ## VirtualBox Automation
-<code></code>
 <code>C:\Program Files\Oracle\VirtualBox>VBoxManage.exe snapshot "WIN10CLIENT-MalwareAnalyse" restore "Analyse01"</code>
 <code>vboxmanage.exe controlvm WIN10CLIENT-MalwareAnalyse poweroff</code>
 <code>vboxmanage.exe startvm WIN10CLIENT-MalwareAnalyse</code>
