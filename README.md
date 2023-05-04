@@ -33,7 +33,7 @@ Sysmon only captures established network connections. To monitor other connectio
  
 <code>vboxmanage.exe startvm WIN10CLIENT-MalwareAnalyse</code>
   
-  ## Tricks
+  ## Tips & Tricks
   
   Tail over the log
   
