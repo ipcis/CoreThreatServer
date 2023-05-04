@@ -11,6 +11,16 @@ logfile = "../corethreat_server.log"
 
 
 
+
+def count_event(event_name):
+    file = open(logfile, "r")
+    data = file.read()
+    occurrences = data.count(event_name)
+    #print('Number of occurrences of the word :', occurrences)
+    return occurrences 
+
+
+
 def generate_html_report(inp):
     # html report
     global report_file
@@ -19,6 +29,29 @@ def generate_html_report(inp):
         with open(report_file, "wt") as fout:
             for line in fin:
                 match = False
+
+                if '{{PROCESS_COUNT}}' in line:
+                    match = True
+                    count_val = count_event("Event ID 1:")
+                    fout.write(line.replace('{{PROCESS_COUNT}}', str(count_val)))
+
+                if '{{NETWORK_COUNT}}' in line:
+                    match = True
+                    count_val = count_event("Event ID 3:")
+                    fout.write(line.replace('{{NETWORK_COUNT}}', str(count_val)))
+
+                if '{{FILE_COUNT}}' in line:
+                    match = True
+                    count_val = count_event("Event ID 11:")
+                    fout.write(line.replace('{{FILE_COUNT}}', str(count_val)))
+
+                if '{{REGISTRY_COUNT}}' in line:
+                    match = True
+                    count_val = count_event("Event ID 12:")
+                    count_val = count_val + count_event("Event ID 13:")
+                    count_val = count_val + count_event("Event ID 14:")
+                    fout.write(line.replace('{{REGISTRY_COUNT}}', str(count_val)))
+
 
                 if '{{LOG}}' in line:
                     match = True
