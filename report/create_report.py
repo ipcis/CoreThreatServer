@@ -38,6 +38,7 @@ def generate_html_report(inp):
                 if '{{NETWORK_COUNT}}' in line:
                     match = True
                     count_val = count_event("Event ID 3:")
+                    count_val = count_val + count_event("Event ID 22:")
                     fout.write(line.replace('{{NETWORK_COUNT}}', str(count_val)))
 
                 if '{{FILE_COUNT}}' in line:
